@@ -1,0 +1,82 @@
+ <form>
+    <div class="form-group">
+    <label for="PassengerName">Passenger Name</label>
+    <input type="text" class="form-control" name="PassengerName" [(ngModel)]="PassengerName">
+</div>
+<div class="form-group">
+    <label for="age">Age</label>
+    <input type="text" class="form-control" name="age" [(ngModel)]="age">
+</div>
+<div class="form-group">
+    <label for="Mobile">Mobile Number</label>
+    <input type="text" class="form-control" name="Mobile" [(ngModel)]="Mobile">
+</div>
+
+</form>
+
+
+<table>
+    <caption>Onward Airlines</caption>
+    <tr>
+        <th>FlightNumber</th>
+        <th>Logo</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let r of result">
+            
+            <td> {{r.flightNumber}}</td>  
+            <td><h3>{{r.logo}}</h3></td>
+            <td><h3>{{r.price}}</h3></td>
+           
+        </tr>
+</tbody>
+   
+<!-- </table>
+
+ <table>
+    <caption>Return Airlines</caption>
+    <tr>
+        <th>FlightNumber</th>
+        <th>Logo</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let s of result">
+            
+            <td><h3>{{r.flightNumber}}</h3></td>
+            <td> {{r.logo}}</td>  
+            <td><h3>{{r.price}}</h3></td>
+            <td><button>view details</button></td>
+            <td><button class="btn btn-primary" type="button" (click)="selectReturn()">Select</button>
+            </td>
+        </tr>
+</tbody>
+   
+</table> -->
+<!-- 
+<div class="form-group">
+    <label for="noofseats">Number of passengers</label>
+    <select name="noofseats" id="noofseats">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        
+     </select>
+ </div>  -->
+
+<div class="form-group">
+    <label for="Meal Preference">Meal Preference</label>
+    <select name="mealpreference" id="mealpreference" [(ngModel)]="mealpreference">
+        <option value="veg">Veg</option>
+        <option value="nonveg">Non-Veg</option>
+    </select>
+ </div>
+<div>
+    <button class="btn btn-primary" type="button" (click)="continueBooking()">Continue Booking</button>
+</div>
+ 

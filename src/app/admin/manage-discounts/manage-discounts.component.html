@@ -1,0 +1,34 @@
+<form>
+   <div class="form-group">
+    <label for="code">Discount Code</label>
+    <input type="text" class="form-control" name="code" [(ngModel)]="code">
+</div>
+
+<div class="form-group">
+    <label for="percentage">Percentage</label>
+    <input type="text" class="form-control" name="percentage" [(ngModel)]="percentage">
+</div>
+<button class="btn btn-primary" type="button" (click)="addDiscount()">Add Discount</button>
+</form>
+
+
+<table>
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Discount Code</th>
+        <th>Percentage</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr *ngFor="let r of result">
+            
+            <td><h3>{{r.id}}</h3></td>
+            <td> {{r.code}}</td>
+            <td>{{r.percentage}}</td> 
+            <td><button class="btn btn-primary" type="button" (click)="deleteDiscount(r.id)">Delete Discount</button></td> 
+        </tr>
+        
+</tbody>
+   
+</table>
